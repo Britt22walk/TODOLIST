@@ -12,11 +12,15 @@ class App extends Component {
     };
   }
 
+  onAddItemClick(){
+    console.log('button clicked!')
+  }
+
   render() {
     return (
       <main className="App mt-5 p-2">
         <h1>My To-Do List</h1>
-        <AddItem />
+        <AddItem onAddItemClick={this.onAddItemClick}/>
         <AllTodos listItems={this.state.listItems}/>
       </main>
     );

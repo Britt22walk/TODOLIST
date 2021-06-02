@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 
-const AddItem = () => {
-    return (
+class AddItem extends Component {
+    render() { 
+        return (
         <div id="add-form" className="add-form m-1 p-1">
             <form>
-              <input type="text" requird placeholder="Update your list"></input>
-              <button type="submit" className="submit-buttom m-1">Add Item</button>
+              <input type="text" required placeholder="Update your list"></input>
+              <button type="submit" className="submit-buttom m-1" onClick={this.props.onAddItemClick}>Add Item</button>
             </form>
-          </div>
-      );
+          </div>  );
+    }
 }
  
 export default AddItem;
+

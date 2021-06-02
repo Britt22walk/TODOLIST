@@ -5,7 +5,8 @@ class AddItem extends Component {
         return (
         <div id="add-form" className="add-form m-1 p-1">
             <form>
-              <input type="text" required placeholder="Update your list"></input>
+                <label>Add Item</label>
+              <input type="text" required placeholder="Update your list" value={this.props.userInput} onChange={(e) => this.props.updateListItems(e.target.value)}></input>
               <button type="submit" className="submit-buttom m-1" onClick={this.props.onAddItemClick}>Add Item</button>
             </form>
           </div>  );

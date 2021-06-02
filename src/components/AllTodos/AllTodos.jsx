@@ -4,13 +4,15 @@ import './AllTodos.css'
 
 
 const AllTodos = (props) => {
-console.log(props.listItems)
-const list = props.listItems.map((item, idx) =>(
-    <TodoItem item={item} key={idx} />
+console.log(props.items) 
+
+const list = props.items.map((toDo, idx) =>(
+    <TodoItem toDo={toDo} key={idx} />
 ))
+
     return (
         <div id="todo-list-app" className="container">
-          {list}
+       {list}
         </div>
       );
 }

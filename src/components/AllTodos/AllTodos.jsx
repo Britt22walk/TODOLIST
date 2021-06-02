@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TodoItem from '../TodoItem/TodoItem';
-
+import './AllTodos.css'
 
 
 const AllTodos = (props) => {
@@ -11,7 +11,6 @@ const list = props.listItems.map((item, idx) =>(
     return (
         <div id="todo-list-app" className="container">
           {list}
-         
         </div>
       );
 }

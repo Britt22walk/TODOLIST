@@ -14,7 +14,7 @@ class App extends Component {
 
   render() {
     return (
-      <main className="App mt-5">
+      <main className="App mt-5 p-2">
         <h1>My To-Do List</h1>
         <AddItem />
         <AllTodos listItems={this.state.listItems}/>

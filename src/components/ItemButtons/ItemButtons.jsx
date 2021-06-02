@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 const ItemButtons = () => {
     return (
         <div id="item-buttons">
-        <button type="done">Finish</button>
-        <button type="clear">Delete</button>
+        <button type="done" className="m-1">Finish</button>
+        <button type="clear" className="m-1">Delete</button>
       </div>
       );
 }

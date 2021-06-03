@@ -17,9 +17,13 @@ class App extends Component {
   }
 
   updateListItems = (userInput) => {
+    
     console.log(userInput); 
+    const newList = [
+      ...this.state.listItems, { item: userInput, finished: false }
+    ]
     this.setState({
-      listItems: [{ item: userInput, finished: false }],
+      listItems: newList,
     });
     
    

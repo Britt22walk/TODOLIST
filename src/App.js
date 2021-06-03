@@ -27,9 +27,7 @@ class App extends Component {
     });
   };
 
-  onFinishButtonClick = () => {};
-
-  onDeleteButtonClick = () => {};
+  
 
   onClearButtonClick = () => {
     console.log("Clear button clicked!")
@@ -48,7 +46,7 @@ class App extends Component {
           updateListItems={this.updateListItems}
         />
         <button onClick={this.onClearButtonClick}>Clear List</button>
-        <AllTodos items={this.state.listItems} />
+        <AllTodos items={this.state.listItems}  />
       </main>
     );
   }

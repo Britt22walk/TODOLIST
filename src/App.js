@@ -17,21 +17,27 @@ class App extends Component {
   }
 
   updateListItems = (userInput) => {
-    
-    console.log(userInput); 
-    const newList = [
-      ...this.state.listItems, { item: userInput, finished: false }
-    ]
+    console.log(userInput);
+    const listItems = [
+      ...this.state.listItems,
+      { item: userInput, finished: false },
+    ];
     this.setState({
-      listItems: newList,
+      listItems
     });
-    
-   
   };
 
-  onAddItemClick() {
-    console.log("button clicked!");
-  }
+  onFinishButtonClick = () => {};
+
+  onDeleteButtonClick = () => {};
+
+  onClearButtonClick = () => {
+    console.log("Clear button clicked!")
+    const listItems = [];
+    this.setState({
+      listItems
+    })
+  };
 
   render() {
     return (
@@ -41,6 +47,7 @@ class App extends Component {
           onAddItemClick={this.onAddItemClick}
           updateListItems={this.updateListItems}
         />
+        <button onClick={this.onClearButtonClick}>Clear List</button>
         <AllTodos items={this.state.listItems} />
       </main>
     );

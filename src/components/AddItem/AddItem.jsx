@@ -9,7 +9,7 @@ class AddItem extends Component {
         return (
         <div id="add-form" className="add-form m-1 p-1">
             <form onSubmit={this.onSubmitForm}>
-                <label>Add Item</label>
+                
               <input type="text" required placeholder="Update your list" value={this.props.userInput} name="newItem"></input>
               <button type="submit" className="submit-buttom m-1" >Add Item</button>
             </form>
